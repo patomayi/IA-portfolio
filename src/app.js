@@ -1,6 +1,9 @@
 import './styles.css';
 import config from './data/config.json';
 import projects from './data/projects.json';
+import emmaPhoto from './images/emma.jpeg';
+
+document.querySelector('.hero-photo img').src = emmaPhoto;
 
 const setText = (selector, value) => {
 	document.querySelectorAll(selector).forEach((element) => {
