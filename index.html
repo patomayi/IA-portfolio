@@ -3,12 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio personal" />
-    <title>Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio personal con proyectos, competencias y datos de contacto."
+    />
+    <meta name="theme-color" content="#f4f2f0" />
+    <title>Portfolio personal</title>
   </head>
   <body>
-    <!-- El script app.js generará aquí la estructura a partir de src/data/ -->
-    <div id="app">Hello World!</div>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="page-shell header-inner">
+        <a class="brand" href="#inicio" aria-label="Volver al inicio">
+          <span class="brand-mark" data-profile="initials" aria-hidden="true">TN</span>
+          <span data-profile="name">Tu Nombre</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir navegación"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Navegación principal">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#competencias">Sobre mí</a>
+          <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="page-shell">
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-profile="profession">Desarrollo web · Diseño digital</span></p>
+            <h1 id="hero-title" data-profile="headline">Hola, soy Tu Nombre. Construyo sitios y aplicaciones web funcionales, con atención al diseño y la accesibilidad.</h1>
+            <a class="text-link" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
+          </div>
+          <figure class="hero-photo">
+            <img
+              src="/src/images/emma.jpeg"
+              alt="Retrato de Emma"
+              fetchpriority="high"
+            />
+          </figure>
+          <p class="hero-location"><span class="location-line" aria-hidden="true"></span><span data-profile="location">Tu ciudad</span></p>
+        </section>
+
+        <section class="projects-section section-block" id="proyectos" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <p class="eyebrow">01 / Selección</p>
+            <h2 id="projects-title">Proyectos</h2>
+            <p class="section-intro">Una selección de ejercicios y trabajos para explorar ideas, interfaces y código.</p>
+          </div>
+          <div class="project-grid" data-projects aria-live="polite"></div>
+        </section>
+
+        <section class="about-section section-block" id="competencias" aria-labelledby="about-title">
+          <div class="section-heading">
+            <p class="eyebrow">02 / Perfil</p>
+            <h2 id="about-title">Sobre mí</h2>
+          </div>
+          <div class="about-content">
+            <div class="about-copy" data-profile="about"></div>
+            <div class="skills-block">
+              <h3>Competencias</h3>
+              <ul class="skill-list" data-skills aria-label="Competencias"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-section section-block" id="contacto" aria-labelledby="contact-title">
+          <div class="contact-copy">
+            <p class="eyebrow">03 / Contacto</p>
+            <h2 id="contact-title">Hablemos de lo que viene.</h2>
+            <p>Para consultas, colaboraciones o simplemente para conectar.</p>
+            <div class="contact-links" data-contact-links></div>
+          </div>
+          <div class="contact-art" aria-hidden="true">
+            <div class="contact-paper paper-one"></div>
+            <div class="contact-paper paper-two"></div>
+            <div class="contact-paper paper-three"></div>
+            <span class="contact-spark">+</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <a class="footer-brand" href="#inicio" data-profile="name">Tu Nombre</a>
+        <p>© <span data-current-year></span> <span data-profile="name">Tu Nombre</span></p>
+        <a class="back-to-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
 
     <script type="module" src="/src/app.js"></script>
   </body>

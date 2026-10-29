@@ -2,6 +2,16 @@
 
 Todas las modificaciones notables de este proyecto se documentan en este archivo según la metodología [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [Unreleased]
+
+### Añadido
+- Portfolio one-page con contenido renderizado desde JSON, navegación móvil accesible y diseño responsive.
+- Perfil bilingüe y ficha del proyecto Agente SQL a partir de los datos compartidos por Emma.
+- Retrato de Emma en la sección de presentación.
+
+### Modificado
+- Sustituidos los datos de plantilla y proyectos ficticios por la información proporcionada; se oculta la ubicación mientras no esté definida.
+
 ## [1.1.0] - 2026-10-26
 
 ### Añadido

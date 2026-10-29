@@ -1,22 +1,37 @@
 {
-  "name": "Tu Nombre",
-  "profession": "Desarrollo web · Diseño digital",
-  "headline": "Hola, soy Tu Nombre. Construyo sitios y aplicaciones web funcionales, con atención al diseño y la accesibilidad.",
+  "name": "Emma",
+  "profession": "Desarrolladora de software",
+  "headline": "Hola, soy Emma. Desarrolladora web en formación, con experiencia en desarrollo front-end y análisis de datos.",
   "about": [
-    "Esta es una plantilla de portfolio para practicar desarrollo asistido por IA. Sustituye este párrafo por una presentación auténtica.",
-    "Explica qué estás aprendiendo, cuáles son tus intereses y qué aportas a tus proyectos. No es necesario inventar experiencia profesional."
+    "ESPAÑOL · Soy Emma Choque, desarrolladora web en formación y estoy terminando el ciclo de Desarrollo de Aplicaciones Web en INS Puig Castellar. Tengo experiencia en desarrollo front-end y análisis de datos. Trabajo con HTML, CSS, JavaScript, Tailwind y Vue, además de Java, Apache, PHP, SQLite, PostgreSQL y MariaDB; también tengo experiencia desplegando aplicaciones web en servidores y entornos de producción.",
+    "Soy proactiva, comunicativa y me motiva aprender. Disfruto colaborando en equipo y aportando soluciones creativas y eficientes. Fuera de la tecnología, me apasionan los deportes extremos: hago snowboard en invierno y surf en verano. Mi objetivo es seguir creciendo en el sector tecnológico y contribuir a proyectos innovadores.",
+    "ENGLISH · I’m Emma Choque, a web developer in training, currently completing the Web Application Development program at INS Puig Castellar. I have experience in front-end development and data analysis. I work with HTML, CSS, JavaScript, Tailwind, and Vue, as well as Java, Apache, PHP, SQLite, PostgreSQL, and MariaDB. I also have experience deploying web applications to servers and production environments.",
+    "I’m proactive, communicative, and motivated to learn. I enjoy collaborating with teams and contributing creative, efficient solutions. Outside tech, I’m passionate about extreme sports: snowboarding in winter and surfing in summer. My goal is to keep growing in tech and contribute to innovative projects."
   ],
-  "location": "Tu ciudad",
+  "location": "",
   "skills": [
-    "HTML semántico",
-    "CSS y diseño responsive",
+    "HTML",
+    "CSS",
     "JavaScript",
-    "Git y GitHub",
-    "Accesibilidad web",
-    "Trabajo en equipo"
+    "Tailwind CSS",
+    "Vue",
+    "React",
+    "Java",
+    "C",
+    "Python",
+    "Apache",
+    "PHP",
+    "SQLite",
+    "PostgreSQL",
+    "MariaDB",
+    "Figma",
+    "Miro",
+    "Análisis de datos",
+    "Despliegue de aplicaciones web",
+    "Comunicación y trabajo en equipo"
   ],
   "contact": {
-    "email": "info@enriqueteruel.com",
+    "email": "emicompilando@gmail.com",
     "github": "",
     "linkedin": "",
     "website": ""
