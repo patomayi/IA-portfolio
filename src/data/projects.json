@@ -11,5 +11,18 @@
     ],
     "url": "https://github.com/patomayi/agente_bd_club",
     "isExample": false
+  },
+  {
+    "name": "Sistema de gestión hospitalaria",
+    "category": "Bases de datos · PHP · Desarrollo web",
+    "description": "Aplicación web desarrollada en PHP para gestionar accesos, pacientes, médicos, enfermeros y el stock de vacunas en un entorno hospitalario con PostgreSQL.",
+    "technologies": [
+      "PHP",
+      "Apache",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "url": "https://github.com/patomayi/hospital-php-sql",
+    "isExample": false
   }
 ]
