@@ -11,6 +11,7 @@ Todas las modificaciones notables de este proyecto se documentan en este archivo
 
 ### Corregido
 - El workflow de Pages puede habilitar GitHub Pages y la foto del hero usa una ruta compatible con el subdirectorio del repositorio.
+- Ajustado el texto secundario del diseño para mejorar el contraste y cumplir la relación mínima de accesibilidad AA sobre fondo claro.
 
 ### Modificado
 - Sustituidos los datos de plantilla y proyectos ficticios por la información proporcionada; se oculta la ubicación mientras no esté definida.

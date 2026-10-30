@@ -2,8 +2,8 @@
 	--color-background: #f4f2f0;
 	--color-surface: #e8e5e2;
 	--color-text: #111111;
-	--color-muted: #77736f;
-	--color-muted-readable: color-mix(in srgb, var(--color-muted) 80%, var(--color-text));
+	--color-muted: #4b4946;
+	--color-muted-readable: #4b4946;
 	--color-accent: #111111;
 	--page-width: 1140px;
 	--space-1: 0.5rem;
