@@ -38,6 +38,66 @@ config.about.forEach((paragraph) => {
 });
 
 const projectsContainer = document.querySelector('[data-projects]');
+const createProjectArtwork = (project) => {
+	const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	svg.setAttribute('viewBox', '0 0 260 200');
+	svg.setAttribute('class', 'project-artwork');
+	svg.setAttribute('aria-hidden', 'true');
+
+	const categoryText = project.category.toLowerCase();
+	const isAi = categoryText.includes('inteligencia') || categoryText.includes('ai');
+	const isDatabase = categoryText.includes('base') || categoryText.includes('sql') || categoryText.includes('postgres');
+	const isWeb = categoryText.includes('php') || categoryText.includes('web') || categoryText.includes('desarrollo');
+
+	if (isAi) {
+		const lines = [
+			'<path d="M40 150 L92 118 L140 150 L188 122 L220 150" />',
+			'<path d="M92 118 L92 78 M140 150 L140 110 M188 122 L188 88" />',
+			'<circle cx="92" cy="78" r="8" />',
+			'<circle cx="140" cy="110" r="8" />',
+			'<circle cx="188" cy="88" r="8" />',
+			'<circle cx="40" cy="150" r="8" />',
+			'<circle cx="220" cy="150" r="8" />',
+		];
+		svg.innerHTML = `
+			<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				${lines.join('')}
+			</g>
+		`;
+	} else if (isDatabase) {
+		svg.innerHTML = `
+			<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<ellipse cx="130" cy="72" rx="58" ry="20" />
+				<path d="M72 72 V124 C72 138 92 150 130 150 C168 150 188 138 188 124 V72" />
+				<path d="M72 92 H188" />
+				<path d="M72 112 H188" />
+				<path d="M72 124 Q130 140 188 124" />
+				<path d="M92 60 V136" opacity="0.65" />
+				<path d="M168 60 V136" opacity="0.65" />
+			</g>
+		`;
+	} else if (isWeb) {
+		svg.innerHTML = `
+			<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<rect x="58" y="56" width="144" height="92" rx="8" />
+				<path d="M58 82 H202" />
+				<path d="M86 120 H128" />
+				<path d="M86 132 H156" />
+				<path d="M92 50 L130 26 L168 50" opacity="0.7" />
+			</g>
+		`;
+	} else {
+		svg.innerHTML = `
+			<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M70 130 L130 60 L190 130 L130 170 Z" />
+				<path d="M130 60 L130 170 M70 130 L190 130" opacity="0.7" />
+			</g>
+		`;
+	}
+
+	return svg;
+};
+
 projects.forEach((project, index) => {
 	const card = document.createElement('article');
 	card.className = 'project-card';
@@ -48,9 +108,7 @@ projects.forEach((project, index) => {
 	const number = document.createElement('span');
 	number.className = 'project-number';
 	number.textContent = String(index + 1).padStart(2, '0');
-	const mark = document.createElement('span');
-	mark.className = 'project-mark';
-	mark.textContent = project.category.slice(0, 1).toUpperCase();
+	const mark = createProjectArtwork(project);
 	visual.append(number, mark);
 
 	const content = document.createElement('div');
@@ -129,7 +187,28 @@ setText('[data-current-year]', String(new Date().getFullYear()));
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#primary-navigation');
+const themeToggle = document.querySelector('.theme-toggle');
 const mobileViewport = window.matchMedia('(max-width: 760px)');
+const THEME_KEY = 'portfolio-theme';
+
+const getPreferredTheme = () => {
+	const storedTheme = localStorage.getItem(THEME_KEY);
+	if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme;
+	return 'dark';
+};
+
+const applyTheme = (theme) => {
+	document.documentElement.setAttribute('data-theme', theme);
+	document.documentElement.style.colorScheme = theme;
+	const isDark = theme === 'dark';
+	themeToggle.setAttribute('aria-pressed', String(isDark));
+	themeToggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+	const toggleThumb = themeToggle.querySelector('.toggle-thumb');
+	const toggleLabel = themeToggle.querySelector('.theme-toggle-label');
+	toggleThumb.textContent = isDark ? '☀' : '☾';
+	toggleLabel.textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+	localStorage.setItem(THEME_KEY, theme);
+};
 
 const closeMenu = ({ returnFocus = false } = {}) => {
 	menuToggle.setAttribute('aria-expanded', 'false');
@@ -147,6 +226,13 @@ menuToggle.addEventListener('click', () => {
 	);
 	navigation.classList.toggle('is-open', !isExpanded);
 });
+
+themeToggle.addEventListener('click', () => {
+	const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+	applyTheme(nextTheme);
+});
+
+applyTheme(getPreferredTheme());
 
 navigation.querySelectorAll('a').forEach((link) => {
 	link.addEventListener('click', () => closeMenu());

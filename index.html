@@ -7,8 +7,11 @@
       name="description"
       content="Portfolio personal con proyectos, competencias y datos de contacto."
     />
-    <meta name="theme-color" content="#f4f2f0" />
+    <meta name="theme-color" content="#0d1b2a" />
     <title>Portfolio personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -28,11 +31,19 @@
           <span></span>
           <span></span>
         </button>
-        <nav id="primary-navigation" class="primary-navigation" aria-label="Navegación principal">
-          <a href="#proyectos">Proyectos</a>
-          <a href="#competencias">Sobre mí</a>
-          <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
-        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Cambiar a modo claro" aria-pressed="true">
+            <span class="toggle-track" aria-hidden="true">
+              <span class="toggle-thumb">☀</span>
+            </span>
+            <span class="theme-toggle-label">Modo claro</span>
+          </button>
+          <nav id="primary-navigation" class="primary-navigation" aria-label="Navegación principal">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#competencias">Sobre mí</a>
+            <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -96,7 +107,7 @@
     <footer class="site-footer">
       <div class="page-shell footer-inner">
         <a class="footer-brand" href="#inicio" data-profile="name">Tu Nombre</a>
-        <p>© <span data-current-year></span> <span data-profile="name">Tu Nombre</span></p>
+        <p>© <span data-current-year></span> ❤️ · Hecho en Córdoba - Arg y Barcelona - Esp</p>
         <a class="back-to-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
       </div>
     </footer>

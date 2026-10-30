@@ -15,6 +15,8 @@ Todas las modificaciones notables de este proyecto se documentan en este archivo
 
 ### Modificado
 - Sustituidos los datos de plantilla y proyectos ficticios por la información proporcionada; se oculta la ubicación mientras no esté definida.
+- Añadida al pie la frase de autoría «Hecho en Córdoba - Arg y Barcelona - Esp».
+- Sustituido el nombre del pie por un corazón junto al símbolo de copyright.
 
 ## [1.1.0] - 2026-10-26
 
