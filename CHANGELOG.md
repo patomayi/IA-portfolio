@@ -10,6 +10,7 @@ Todas las modificaciones notables de este proyecto se documentan en este archivo
 - Retrato de Emma en la sección de presentación.
 - Metadatos Open Graph/Twitter, datos estructurados Person, sitemap, robots.txt e iconos del sitio.
 - Favicon y Apple Touch Icon configurados con `src/images/favicon.png`.
+- Favicon junto al nombre en el pie del portfolio.
 
 ### Corregido
 - El workflow de Pages puede habilitar GitHub Pages y la foto del hero usa una ruta compatible con el subdirectorio del repositorio.

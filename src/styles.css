@@ -200,6 +200,18 @@ button:focus-visible {
 	text-decoration: none;
 }
 
+.footer-brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-brand img {
+	width: 1.5rem;
+	height: 1.5rem;
+	object-fit: contain;
+}
+
 .brand {
 	gap: 0.75rem;
 }
