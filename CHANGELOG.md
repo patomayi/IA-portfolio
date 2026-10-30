@@ -11,8 +11,10 @@ Todas las modificaciones notables de este proyecto se documentan en este archivo
 - Metadatos Open Graph/Twitter, datos estructurados Person, sitemap, robots.txt e iconos del sitio.
 - Favicon y Apple Touch Icon configurados con `src/images/favicon.png`.
 - Favicon junto al nombre en el pie del portfolio.
+- Tarjeta de LinkedIn con enlace al perfil proporcionado.
 
 ### Corregido
+- Restaurada la distribución y separación de los elementos del pie en escritorio y móvil.
 - El workflow de Pages puede habilitar GitHub Pages y la foto del hero usa una ruta compatible con el subdirectorio del repositorio.
 - Ajustado el texto secundario del diseño para mejorar el contraste y cumplir la relación mínima de accesibilidad AA sobre fondo claro.
 - Eliminada la solicitud remota a Google Fonts para evitar enviar la IP del visitante a Google sin necesidad.

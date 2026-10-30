@@ -164,7 +164,6 @@ const contactLinks = document.querySelector('[data-contact-links]');
 const contactEntries = [
 	['email', 'Email', (value) => `mailto:${value}`],
 	['github', 'GitHub', (value) => value],
-	['linkedin', 'LinkedIn', (value) => value],
 	['website', 'Sitio web', (value) => value],
 ];
 contactEntries.forEach(([key, label, getHref]) => {
@@ -182,6 +181,37 @@ contactEntries.forEach(([key, label, getHref]) => {
 	}
 	contactLinks.append(link);
 });
+
+const linkedinCardContainer = document.querySelector('[data-linkedin-card]');
+if (config.contact?.linkedin) {
+	const linkedinCard = document.createElement('a');
+	linkedinCard.className = 'linkedin-card';
+	linkedinCard.href = config.contact.linkedin;
+	linkedinCard.target = '_blank';
+	linkedinCard.rel = 'noopener noreferrer';
+	linkedinCard.setAttribute('aria-label', `Ver el perfil de ${config.name} en LinkedIn (se abre en una pestaña nueva)`);
+
+	const linkedinMark = document.createElement('span');
+	linkedinMark.className = 'linkedin-card-mark';
+	linkedinMark.setAttribute('aria-hidden', 'true');
+	linkedinMark.textContent = 'in';
+
+	const linkedinCopy = document.createElement('span');
+	linkedinCopy.className = 'linkedin-card-copy';
+	const linkedinLabel = document.createElement('span');
+	linkedinLabel.className = 'linkedin-card-platform';
+	linkedinLabel.textContent = 'LinkedIn';
+	const linkedinName = document.createElement('strong');
+	linkedinName.className = 'linkedin-card-name';
+	linkedinName.textContent = config.name;
+	const linkedinAction = document.createElement('span');
+	linkedinAction.className = 'linkedin-card-action';
+	linkedinAction.textContent = 'Ver perfil profesional ↗';
+	linkedinCopy.append(linkedinLabel, linkedinName, linkedinAction);
+	linkedinCard.append(linkedinMark, linkedinCopy);
+	linkedinCardContainer.append(linkedinCard);
+	linkedinCardContainer.hidden = false;
+}
 
 setText('[data-current-year]', String(new Date().getFullYear()));
 

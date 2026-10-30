@@ -609,62 +609,64 @@ h1 {
 }
 
 .contact-art {
-	position: relative;
-	width: min(100%, 20rem);
-	aspect-ratio: 1.15;
+	width: min(100%, 22rem);
 	justify-self: end;
 }
 
-.contact-paper {
-	position: absolute;
-	width: 52%;
-	height: 42%;
+.linkedin-card {
+	display: flex;
+	min-height: 9rem;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.25rem;
 	border: 1px solid var(--color-border-strong);
 	background: var(--color-surface);
-	transform: rotate(-12deg);
+	color: var(--color-text);
+	text-decoration: none;
+	transition: border-color 160ms ease, transform 160ms ease;
 }
 
-.contact-paper::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 50%;
-	border-right: 1px solid var(--color-border-strong);
-	border-bottom: 1px solid var(--color-border-strong);
-	content: "";
-	transform: skewY(30deg);
-	transform-origin: top left;
+.linkedin-card:hover {
+	border-color: #0a66c2;
+	transform: translateY(-2px);
 }
 
-.paper-one {
-	top: 10%;
-	left: 8%;
-}
-
-.paper-two {
-	top: 36%;
-	left: 37%;
-	transform: rotate(10deg);
-}
-
-.paper-three {
-	top: 52%;
-	left: 2%;
-	transform: rotate(-24deg);
-}
-
-.contact-spark {
-	position: absolute;
-	top: 5%;
-	right: 7%;
-	font-size: 3rem;
-	font-weight: 300;
+.linkedin-card-mark {
+	display: grid;
+	width: 3rem;
+	height: 3rem;
+	flex: 0 0 auto;
+	place-items: center;
+	border-radius: 3px;
+	background: #0a66c2;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size: 1.7rem;
+	font-weight: 700;
 	line-height: 1;
 }
 
-.site-footer {
-	border-top: 1px solid rgb(17 17 17 / 16%);
+.linkedin-card-copy {
+	display: grid;
+	gap: 0.2rem;
+}
+
+.linkedin-card-platform {
+	color: var(--color-muted-readable);
+	font-size: 0.75rem;
+}
+
+.linkedin-card-name {
+	font-size: 1.1rem;
+}
+
+.linkedin-card-action {
+	margin-top: 0.3rem;
+	color: var(--color-text);
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
 }
 
 .footer-inner {
@@ -838,7 +840,7 @@ h1 {
 	}
 
 	.contact-art {
-		width: min(70%, 17rem);
+		width: min(100%, 22rem);
 		justify-self: center;
 	}
 }
