@@ -8,10 +8,12 @@ Todas las modificaciones notables de este proyecto se documentan en este archivo
 - Portfolio one-page con contenido renderizado desde JSON, navegación móvil accesible y diseño responsive.
 - Perfil bilingüe y ficha del proyecto Agente SQL a partir de los datos compartidos por Emma.
 - Retrato de Emma en la sección de presentación.
+- Metadatos Open Graph/Twitter, datos estructurados Person, sitemap, robots.txt e iconos del sitio.
 
 ### Corregido
 - El workflow de Pages puede habilitar GitHub Pages y la foto del hero usa una ruta compatible con el subdirectorio del repositorio.
 - Ajustado el texto secundario del diseño para mejorar el contraste y cumplir la relación mínima de accesibilidad AA sobre fondo claro.
+- Eliminada la solicitud remota a Google Fonts para evitar enviar la IP del visitante a Google sin necesidad.
 
 ### Modificado
 - Sustituidos los datos de plantilla y proyectos ficticios por la información proporcionada; se oculta la ubicación mientras no esté definida.

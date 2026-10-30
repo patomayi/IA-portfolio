@@ -19,7 +19,7 @@ const initials = config.name
 	.join('')
 	.toUpperCase();
 
-document.title = `${config.name} | Portfolio`;
+document.title = `${config.name} | Desarrolladora de software y portfolio`;
 setText('[data-profile="name"]', config.name);
 setText('[data-profile="initials"]', initials);
 setText('[data-profile="profession"]', config.profession);

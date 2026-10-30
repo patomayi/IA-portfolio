@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patomayi.github.io/IA-portfolio/sitemap.xml
